@@ -132,3 +132,36 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.grid-test {
+  font-size: 2rem;
+  color: #ffffff;
+  text-align: center; }
+
+.row {
+  width: 114rem;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: "";
+    display: table;
+    clear: both; }
+  .row [class^='col-'] {
+    float: left;
+    padding: 2rem;
+    background-color: #ff6348; }
+    .row [class^='col-']:not(:last-child) {
+      margin-right: 2rem; }
+  .row .col-2 {
+    width: calc((100% - 2rem) / 2); }
+  .row .col-3 {
+    width: calc((100% - 2 * 2rem) / 3); }
+  .row .col-3-2 {
+    width: calc((100% * 2 - 2rem) / 3); }
+  .row .col-4 {
+    width: calc((100% - 3 * 2rem) / 4); }
+  .row .col-4-2 {
+    width: calc((100% * 2 - 2 * 2rem) / 4); }
+  .row .col-4-3 {
+    width: calc((100% * 3 - 2rem) / 4); }
