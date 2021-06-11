@@ -49,6 +49,7 @@ body {
 .heading-primary {
   color: #ffffff;
   text-transform: uppercase;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   margin-bottom: 6rem; }
   .heading-primary--main {
@@ -56,8 +57,11 @@ body {
     font-size: 6rem;
     font-weight: 400;
     letter-spacing: 3.5rem;
+    -webkit-animation-name: moveInLeft;
     animation-name: moveInLeft;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
     /* animation-iteration-count: 3; */
     /* animation-delay: 3s; */ }
@@ -66,9 +70,46 @@ body {
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 1.7rem;
+    -webkit-animation-name: moveInRight;
     animation-name: moveInRight;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out; }
+
+.heading-secondary {
+  display: inline-block;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background-image: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(2deg) skewX(15deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem; }
 
 .btn:link, .btn:visited {
   position: relative;
@@ -113,13 +154,59 @@ body {
   animation: moveInBottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
+.btn-text:link, .btn-text:visited {
+  display: inline-block;
+  padding: 3px;
+  font-size: 1.6rem;
+  color: #55c57a;
+  text-decoration: none;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s; }
+
+.btn-text:hover {
+  padding: 3px 15px;
+  color: #ffffff;
+  background-color: #55c57a;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px); }
+
+.btn-text:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    position: absolute;
+    width: 55%;
+    border-radius: 2px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    outline-offset: 2rem;
+    transition: all 0.2s; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #55c57a;
+      transform: scale(1.05) translateY(-0.5rem);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 10; }
+    .composition__photo--one {
+      top: -2rem;
+      left: 0; }
+    .composition__photo--two {
+      top: 2rem;
+      right: 0; }
+    .composition__photo--three {
+      top: 10rem;
+      left: 20%; }
+  .composition:hover .composition__photo:not(:hover) {
+    transform: scale(0.95); }
+
 .header {
-  position: relative;
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%); }
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
   .header__logo-box {
     position: absolute;
     top: 4rem;
@@ -133,11 +220,6 @@ body {
     transform: translate(-50%, -50%);
     text-align: center; }
 
-.grid-test {
-  font-size: 2rem;
-  color: #ffffff;
-  text-align: center; }
-
 .row {
   width: 114rem;
   margin: 0 auto; }
@@ -148,9 +230,7 @@ body {
     display: table;
     clear: both; }
   .row [class^='col-'] {
-    float: left;
-    padding: 2rem;
-    background-color: #ff6348; }
+    float: left; }
     .row [class^='col-']:not(:last-child) {
       margin-right: 2rem; }
   .row .col-2 {
@@ -165,3 +245,8 @@ body {
     width: calc((100% * 2 - 2 * 2rem) / 4); }
   .row .col-4-3 {
     width: calc((100% * 3 - 2rem) / 4); }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 35rem 0 25rem;
+  margin-top: -20vh; }
