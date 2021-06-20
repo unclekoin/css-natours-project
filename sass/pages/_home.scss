@@ -1,7 +1,7 @@
 .section-about {
-  background-color: $color-grey-light-one;
-  padding: 35rem 0 25rem;
   margin-top: -20vh;
+  padding: 35rem 0 25rem;
+  background-color: $color-grey-light-one;
 }
 
 .section-features {
@@ -13,11 +13,17 @@
       rgba($color-primary-dark, 0.8)
     ),
     url(../img/nat-4.jpg);
-    background-size: cover;
+  background-size: cover;
 
-    transform: skewY(-7deg);
-    
-    & > * {
-      transform: skewY(7deg);
-    }
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+}
+
+.section-tours {
+  margin-top: -10rem;
+  padding: 35rem 0 15rem;
+  background-color: $color-grey-light-one;
 }
