@@ -138,11 +138,11 @@
           <div class="col-3">
             <div class="card">
               <div class="card__side card__side--front">
-                <div class="card__picture card__picture--one">
-                  &nbsp;
-                </div>
+                <div class="card__picture card__picture--one">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--one">The Sea Explorer</span>
+                  <span class="card__heading-span card__heading-span--one"
+                    >The Sea Explorer</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -168,11 +168,11 @@
           <div class="col-3">
             <div class="card">
               <div class="card__side card__side--front">
-                <div class="card__picture card__picture--two">
-                  &nbsp;
-                </div>
+                <div class="card__picture card__picture--two">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--two">The Forest Hiker</span>
+                  <span class="card__heading-span card__heading-span--two"
+                    >The Forest Hiker</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -198,11 +198,11 @@
           <div class="col-3">
             <div class="card">
               <div class="card__side card__side--front">
-                <div class="card__picture card__picture--three">
-                  &nbsp;
-                </div>
+                <div class="card__picture card__picture--three">&nbsp;</div>
                 <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--three">The Snow Adventurer</span>
+                  <span class="card__heading-span card__heading-span--three"
+                    >The Snow Adventurer</span
+                  >
                 </h4>
                 <div class="card__details">
                   <ul>
@@ -233,8 +233,8 @@
       <section class="section-stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
-            <source src="img/video.mp4" type="video/mp4">
-            <source src="img/video.webm" type="video/webm">
+            <source src="img/video.mp4" type="video/mp4" />
+            <source src="img/video.webm" type="video/webm" />
             Your browser is not supported video!
           </video>
         </div>
@@ -244,7 +244,11 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img class="story__img" src="img/nat-8.jpg" alt="Person on a tout">
+              <img
+                class="story__img"
+                src="img/nat-8.jpg"
+                alt="Person on a tout"
+              />
               <figcaption class="story__caption">Mary Smith</figcaption>
             </figure>
             <div class="story__text">
@@ -252,7 +256,11 @@
                 I had the best week with my family
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magni ullam alias neque vitae rem maxime nihil repellat quae? Excepturi atque ducimus dolorum nihil? Officiis error quasi vitae labore aspernatur. Excepturi atque ducimus dolorum nihil? Officiis error quasi vitae labore aspernatur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                magni ullam alias neque vitae rem maxime nihil repellat quae?
+                Excepturi atque ducimus dolorum nihil? Officiis error quasi
+                vitae labore aspernatur. Excepturi atque ducimus dolorum nihil?
+                Officiis error quasi vitae labore aspernatur.
               </p>
             </div>
           </div>
@@ -260,7 +268,11 @@
         <div class="row">
           <div class="story">
             <figure class="story__shape">
-              <img class="story__img" src="img/nat-9.jpg" alt="Person on a tout">
+              <img
+                class="story__img"
+                src="img/nat-9.jpg"
+                alt="Person on a tout"
+              />
               <figcaption class="story__caption">Jack Wilson</figcaption>
             </figure>
             <div class="story__text">
@@ -268,13 +280,69 @@
                 WOW! My life is completely different now!
               </h3>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum magni ullam alias neque vitae rem maxime nihil repellat quae? Excepturi atque ducimus dolorum nihil? Officiis error quasi vitae labore aspernatur. Excepturi atque ducimus dolorum nihil? Officiis error quasi vitae labore aspernatur.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
+                magni ullam alias neque vitae rem maxime nihil repellat quae?
+                Excepturi atque ducimus dolorum nihil? Officiis error quasi
+                vitae labore aspernatur. Excepturi atque ducimus dolorum nihil?
+                Officiis error quasi vitae labore aspernatur.
               </p>
             </div>
           </div>
         </div>
         <div class="u-center-text u-margin-top-huge">
           <a href="#" class="btn-text">Read all stories &rarr;</a>
+        </div>
+      </section>
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form class="form" action="#">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start booking now</h2>
+                </div>
+                <div class="form__group">
+                  <input
+                    class="form__input"
+                    type="text"
+                    placeholder="Full name"
+                    id="name"
+                    required
+                  />
+                  <label class="form__label" for="name">Full name</label>
+                </div>
+                <div class="form__group">
+                  <input
+                    class="form__input"
+                    type="email"
+                    placeholder="Email address"
+                    id="email"
+                    required
+                  />
+                  <label class="form__label" for="email">Email address</label>
+                </div>
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input class="form__radio-input" id="small" type="radio" name="size">
+                    <label class="form__radio-label" for="small">
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input class="form__radio-input" id="large" type="radio" name="size">
+                    <label class="form__radio-label" for="large">
+                      <span class="form__radio-button"></span>
+                      Large tour group
+                    </label>
+                  </div>
+                </div>
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
