@@ -8,6 +8,10 @@
   cursor: pointer;
   transition: transform 0.3s;
 
+  @include respond(tab-port) {
+    padding: 2rem;
+  }
+
   &:hover {
     transform: translateY(-1.5rem) scale(1.03);
   }
@@ -24,5 +28,9 @@
     );
     -webkit-background-clip: text;
     background-clip: text;
+
+    @include respond(tab-port) {
+      margin-bottom: 0;
+    }
   }
 }
