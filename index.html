@@ -59,7 +59,9 @@
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
 
-        <a class="btn btn--white btn--animated" href="#section-tours">Discover our tours</a>
+        <a class="btn btn--white btn--animated" href="#section-tours"
+          >Discover our tours</a
+        >
       </div>
     </header>
 
@@ -93,6 +95,30 @@
           <div class="col-2">
             <div class="composition">
               <img
+                srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo one"
+                class="composition__photo composition__photo--one"
+                src="img/nat-1-large.jpg"
+              />
+
+              <img
+                srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo two"
+                class="composition__photo composition__photo--two"
+                src="img/nat-2-large.jpg"
+              />
+
+              <img
+                srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w"
+                sizes="(max-width: 56.25em) 20vw, (max-width: 37.5em) 30vw, 300px"
+                alt="Photo three"
+                class="composition__photo composition__photo--three"
+                src="img/nat-3-large.jpg"
+              />
+
+              <!-- <img
                 src="img/nat-1-large.jpg"
                 alt="Photo one"
                 class="composition__photo composition__photo--one"
@@ -106,7 +132,7 @@
                 src="img/nat-3-large.jpg"
                 alt="Photo three"
                 class="composition__photo composition__photo--three"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -392,7 +418,20 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img class="footer__logo" src="img/logo-green-2x.png" alt="Full logo" />
+        <picture class="footer__logo">
+          <source
+            srcset="
+              img/logo-green-small-1x.png 1x,
+              img/logo-green-small-2x.png 2x
+            "
+            media="(max-width: 37.5rem)"
+          />
+          <img
+            srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x"
+            src="img/logo-green-2x.png"
+            alt="Full logo"
+          />
+        </picture>
       </div>
       <div class="row">
         <div class="col-2">
@@ -432,14 +471,33 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo">
-          <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo">
+          <img class="popup__img" src="img/nat-8.jpg" alt="Tour photo" />
+          <img class="popup__img" src="img/nat-9.jpg" alt="Tour photo" />
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
-          <h2 class="heading-secondary u-margin-bottom-small">Stert booking now</h2>
-          <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-          <p class="popup__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores assumenda velit optio incidunt laboriosam natus blanditiis magni fuga? Minus architecto saepe aut culpa. Fuga cum facere eum? Similique tenetur cum dignissimos corrupti dolor eius, culpa numquam accusamus ipsum itaque necessitatibus voluptas ad quidem laborum alias ullam rerum dolorum sit autem soluta tempore dicta. Veritatis, voluptates cum laboriosam maxime corrupti doloribus ea minima perspiciatis, amet est veniam accusamus, incidunt officia earum. Suscipit pariatur, rerum sit dolor soluta corporis recusandae. Sapiente est, exercitationem saepe dolorum perspiciatis incidunt cum quam, quisquam adipisci explicabo eos dignissimos excepturi iste consequatur earum voluptatem deleniti molestias velit in. Et earum, ea debitis blanditiis sint quae libero nihil ab, odit asperiores atque magni totam perspiciatis expedita explicabo natus!</p>
+          <h2 class="heading-secondary u-margin-bottom-small">
+            Stert booking now
+          </h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">
+            Important &ndash; Please read these terms before booking
+          </h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+            assumenda velit optio incidunt laboriosam natus blanditiis magni
+            fuga? Minus architecto saepe aut culpa. Fuga cum facere eum?
+            Similique tenetur cum dignissimos corrupti dolor eius, culpa numquam
+            accusamus ipsum itaque necessitatibus voluptas ad quidem laborum
+            alias ullam rerum dolorum sit autem soluta tempore dicta. Veritatis,
+            voluptates cum laboriosam maxime corrupti doloribus ea minima
+            perspiciatis, amet est veniam accusamus, incidunt officia earum.
+            Suscipit pariatur, rerum sit dolor soluta corporis recusandae.
+            Sapiente est, exercitationem saepe dolorum perspiciatis incidunt cum
+            quam, quisquam adipisci explicabo eos dignissimos excepturi iste
+            consequatur earum voluptatem deleniti molestias velit in. Et earum,
+            ea debitis blanditiis sint quae libero nihil ab, odit asperiores
+            atque magni totam perspiciatis expedita explicabo natus!
+          </p>
           <a href="#" class="btn btn--green">Book now</a>
         </div>
       </div>
